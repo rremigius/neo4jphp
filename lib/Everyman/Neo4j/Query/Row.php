@@ -34,6 +34,14 @@ class Row implements \Iterator, \Countable, \ArrayAccess
 
 	// ArrayAccess API
 
+    /**
+     * Addition for Graphileon InterActor, by Remi
+     * @return array|null
+     */
+    public function getRaw() {
+        return $this->raw;
+    }
+
 	public function offsetExists($offset)
 	{
 		if (!is_integer($offset)) {
