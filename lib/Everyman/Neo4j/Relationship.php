@@ -23,6 +23,27 @@ class Relationship extends PropertyContainer
 	 */
 	protected $type = null;
 
+    /**
+     * Addition for Graphileon InterActor, by Remi
+     * @var null
+     */
+    protected $raw = null;
+
+    /**
+     * Addition for Graphileon InterActor, by Remi
+     * @param $raw
+     */
+    public function setRaw($raw) {
+        $this->raw = $raw;
+    }
+
+    /**
+     * Addition for Graphileon InterActor, by Remi
+     * @return array
+     */
+    public function getRaw() {
+        return $this->raw;
+    }
 
 	/**
 	 * @inheritdoc

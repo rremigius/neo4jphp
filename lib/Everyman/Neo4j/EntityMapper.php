@@ -91,6 +91,7 @@ class EntityMapper
 	{
 		$node->useLazyLoad(false);
 		$node->setProperties($data['data']);
+      $node->setRaw($data);
 		return $node;
 	}
 
@@ -137,6 +138,7 @@ class EntityMapper
 		$rel->useLazyLoad(false);
 		$rel->setProperties($data['data']);
 		$rel->setType($data['type']);
+      $rel->setRaw($data);
 
 		$rel->setStartNode($this->getNodeFromUri($data['start']));
 		$rel->setEndNode($this->getNodeFromUri($data['end']));
